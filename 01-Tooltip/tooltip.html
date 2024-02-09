@@ -24,10 +24,15 @@
     </div>
 
     <!-- Tooltip 2 Component -->
-
-
-
-
+    <div class="tooltip" x-data="{ tooltip: false }">
+        <button 
+            x-on:click="tooltip = !tooltip"
+            >Click Me!
+        </button>
+        <div class="tooltip-text" x-show="tooltip">
+            This is a Tooltip!
+        </div>
+    </div>
 
 </body>
 
