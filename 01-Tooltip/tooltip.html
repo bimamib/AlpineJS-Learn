@@ -12,11 +12,13 @@
 
 <body>
     <!-- Tooltip 1 Component -->
-    <div class="tooltip">
-        <button>
+    <div class="tooltip" x-data="{ tooltip: false }">
+        <button 
+            x-on:mouseover="tooltip = true" 
+            x-on:mouseleave="tooltip = false">
             Hover Me!
         </button>
-        <div class="tooltip-text">
+        <div class="tooltip-text" x-show="tooltip">
             This is a Tooltip!
         </div>
     </div>
