@@ -11,28 +11,28 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container" x-data="{ tabOpen: 1}">
         <div class="tab-btns">
-            <button class="active">Tab One</button>
-            <button>Tab Two</button>
-            <button>Tab Three</button>
+            <button @click="tabOpen = 1" class="active" :class="{ 'active' : tabOpen == 1}">Tab One</button>
+            <button @click="tabOpen = 2" :class="{ 'active' : tabOpen == 2}">Tab Two</button>
+            <button @click="tabOpen = 3" :class="{ 'active' : tabOpen == 3}">Tab Three</button>
         </div>
         <div class="tab-contents">
-            <div>
+            <div x-show="tabOpen == 1">
                 <h3>Tab 1 Contents</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Cupiditate inventore deleniti consequatur dignissimos est porro commodi voluptas. 
                     Necessitatibus, numquam veniam excepturi, consequuntur incidunt corrupti amet quibusdam quaerat aperiam voluptates illo.
                 </p>
             </div>
-            <div>
+            <div x-show="tabOpen == 2" x-cloak>
                 <h3>Tab 2 Contents</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Cupiditate inventore deleniti consequatur dignissimos est porro commodi voluptas. 
                     Necessitatibus, numquam veniam excepturi, consequuntur incidunt corrupti amet quibusdam quaerat aperiam voluptates illo.
                 </p>
             </div>
-            <div>
+            <div x-show="tabOpen == 3" x-cloak>
                 <h3>Tab 3 Contents</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Cupiditate inventore deleniti consequatur dignissimos est porro commodi voluptas. 
