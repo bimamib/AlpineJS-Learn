@@ -66,3 +66,11 @@ button svg {
 .show {
     display: inline-block;
 }
+
+button {
+    border-bottom: 1px solid rgba(185, 185, 185, 0.4);
+}
+
+.single-acc:not(:first-child) button {
+    border-top: 1px solid rgba(185, 185, 185, 0.4);
+}
