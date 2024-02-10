@@ -48,6 +48,12 @@ button svg {
     right: 40px;
 }
 
+.acc-content {
+    max-height: 0;
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
+}
+
 .acc-content p {
     padding: 30px;
     text-align: justify;
