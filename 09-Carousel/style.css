@@ -14,3 +14,44 @@ body {
     align-items: center;
     min-height: 100vh;
 }
+
+img {
+    max-width: 100%;
+}
+
+.carousel-item {
+    display: none;
+}
+
+.carousel-item.active {
+    display: inline-block;
+}
+
+.container {
+    position: relative;
+}
+
+button {
+    position: absolute;
+    top: 45%;
+    border: none;
+    border-radius: 3px;
+    padding: 3px 1px 0px;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+}
+
+button svg {
+    height: 22px;
+}
+
+.carousel-control button:nth-child(1) {
+    left: 20px;
+}
+
+.carousel-control button:nth-child(2) {
+    right: 20px;
+}
