@@ -70,3 +70,19 @@ button.close svg {
   background-color: #000;
   opacity: 0.50;
 }
+
+.transition {
+  transition: all 0.6s ease-in-out;
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.opacity-100 {
+  opacity: 100;
+}
+
+[x-cloak] {
+  display: none;
+}

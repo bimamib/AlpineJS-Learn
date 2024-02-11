@@ -10,13 +10,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <button class="open">Open Modal</button>
-    <div class="modal">
+<body x-data="{'isOpen': false}" @keydown.escape="isOpen = false">
+    <button class="open" @click="isOpen = true">Open Modal</button>
+    <div class="modal" x-show="isOpen" @click.away="isOpen = false"
+    x-transition:enter="transition"
+    x-transition:enter-start="opacity-0"
+    x-transition:enter-end="opacity-100"
+    x-transition:leave="transition"
+    x-transition:leave-end="opacity-0"
+    x-cloak
+    >
         <div class="modal-inner">
             <div class="modal-header">
                 <h3>Our Simple Modal</h3>
-                <button class="close">
+                <button class="close" @click="isOpen = false">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
@@ -29,7 +36,7 @@
             </p>
         </div>
     </div>
-    <div class="overlay"></div>
+    <div class="overlay" x-show="isOpen" x-cloak></div>
 
 
 
