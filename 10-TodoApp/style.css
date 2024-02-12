@@ -178,3 +178,7 @@ button.remove svg {
     border-radius: 20px;
     margin-top: 20px;
 }
+
+.completed {
+    text-decoration: line-through;
+}
