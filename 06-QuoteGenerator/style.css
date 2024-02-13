@@ -7,16 +7,29 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+.light-theme {
+  --text-color: #131313;
+  --card-bg: #ebebeb;
+  --body-bg: #FFF;
+}
+
+.dark-theme {
+  --text-color: #ddd;
+  --card-bg: #171a1f;
+  --body-bg: #262932;
+}
+
 body {
   display: flex;
   min-height: 100vh;
   justify-content: center;
   align-items: center;
-  background-color: #5372f0;
+  background-color: var(--body-bg);
 }
 
 .card {
-  background-color: #FFF;
+  background-color: var(--card-bg);
+  color: var(--text-color);
   width: 500px;
   border-radius: 10px;
 }
@@ -56,4 +69,24 @@ button {
 
 button:hover {
   background-color: #204dff;
+}
+
+.switch {
+  position: fixed;
+  top: 40px;
+  right: 40px;
+  background-color: var(--text-color);
+  color: var(--card-bg);
+  padding: 10px 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+}
+
+.switch svg {
+  width: 25px;
+}
+
+[x-cloak] {
+  display: none !important;
 }
